@@ -1,12 +1,12 @@
 import turtle
-import os
 wn = turtle.Screen()
-wn.setup(width=1000, height=1000)
+wn.setup(width=900, height=500)
+wn.register_shape('cookiemoji.gif')
 cookie = turtle.Turtle()
-cookie.shape('circle')
+
+cookie.shape('cookiemoji.gif')
 
 cookie.shapesize(stretch_wid=5,stretch_len=5)
-cookie.color('brown')
 cookie.penup()
 cookie.goto(0,-50)
 global clicks
@@ -123,7 +123,7 @@ while True:
         
     else:
         buyfarm.goto(0,70)
-        buyfarm.write("You can buy a farm if you have more than 50 clicks!", align="center", font=("Courier", 24, "normal"))
+        buyfarm.write("You can buy a farm if you have more than 50 clicks!", align="center", font=("Courier", 20, "normal"))
         #factory
     if clicks > 100:
         ffactory.goto(0,-180)
@@ -131,7 +131,7 @@ while True:
         wn.onkeypress(factorian, "h")
     else:
         buyfactory.goto(0,100)
-        buyfactory.write("You can buy a factory if you have more than 100 clicks!", align="center", font=("Courier", 24, "normal"))
+        buyfactory.write("You can buy a factory if you have more than 100 clicks!", align="center", font=("Courier", 20, "normal"))
     #printer
     if clicks > 10:
         pprinter.goto(0,-130)
@@ -139,7 +139,7 @@ while True:
         wn.onkeypress(printingaa, "p")
     else:
         buyprinter.goto(0,130)
-        buyprinter.write("You can buy a printer if you have more than 10 clicks!", align="center", font=("Courier", 24, "normal"))
+        buyprinter.write("You can buy a printer if you have more than 10 clicks!", align="center", font=("Courier", 20, "normal"))
     
 
 
