@@ -1,7 +1,7 @@
 import turtle
 import os
 wn = turtle.Screen()
-wn.setup(width=800, height=600)
+wn.setup(width=1000, height=1000)
 cookie = turtle.Turtle()
 cookie.shape('circle')
 
