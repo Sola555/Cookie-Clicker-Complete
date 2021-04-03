@@ -1,6 +1,6 @@
 import turtle
 wn = turtle.Screen()
-wn.setup(width=900, height=500)
+wn.setup(width=900, height=900)
 wn.register_shape('cookiemoji.gif')
 cookie = turtle.Turtle()
 
@@ -13,6 +13,10 @@ global clicks
 clicks = 0
 global gain
 gain = 1
+clickrate = turtle.Turtle()
+clickrate.goto(0,250)
+clickrate.penup()
+clickrate.hideturtle()
 
 def add_click(x, y):
     global clicks
@@ -44,6 +48,8 @@ def farmer():
         farm.clear()
         farm.goto(0,220)
         farm.write("Farm level: {}".format(farming), align="center", font=("Courier", 24, "normal"))
+        clickrate.clear()
+        clickrate.write("Clickrate = {}".format(gain), align="center", font=("Courier", 24, "normal"))
     else:
         print("You need more than 20 clicks to buy a farm.")
 
@@ -60,6 +66,8 @@ def printingaa():
         print.clear()
         print.goto(0,160)
         print.write("Printer level: {}".format(printings), align="center", font=("Courier", 24, "normal"))
+        clickrate.clear()
+        clickrate.write("Clickrate = {}".format(gain), align="center", font=("Courier", 24, "normal"))
     else:
         print("You need more than 10 clicks to buy a printer.")
 #factory
@@ -113,6 +121,8 @@ def factorian():
         factory.clear()
         factory.goto(0,190)
         factory.write("Factory level: {}".format(Factoring), align="center", font=("Courier", 24, "normal"))
+        clickrate.clear()
+        clickrate.write("Clickrate = {}".format(gain), align="center", font=("Courier", 24, "normal"))
 
 while True:
     #farm
